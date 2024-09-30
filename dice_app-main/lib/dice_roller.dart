@@ -36,84 +36,89 @@
 // }
 
 // Auto Random Dice Roller
-// import 'dart:math';
-// import 'dart:async';
-// import 'package:flutter/material.dart';
+import 'dart:math';
+import 'dart:async';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 
-// final randomizer = Random();
+final randomizer = Random();
 
-// class DiceRoller extends StatefulWidget {
-//   const DiceRoller({Key? key}) : super(key: key);
+class DiceRoller extends StatefulWidget {
+  const DiceRoller({super.key});
 
-//   @override
-//   State<DiceRoller> createState() => _DiceRollerState();
-// }
+  @override
+  State<DiceRoller> createState() => _DiceRollerState();
+}
 
-// class _DiceRollerState extends State<DiceRoller> {
-//   var currentDiceRoll = 2;
-//   Timer? _timer;
-//   bool isRolling = false;
+class _DiceRollerState extends State<DiceRoller> {
+  var currentDiceRoll = 2;
+  Timer? _timer;
+  bool isRolling = false;
 
-//   @override
-//   void initState() {
-//     super.initState();
-//     startRolling();
-//   }
+  @override
+  void initState() {
+    super.initState();
+    startRolling();
+  }
 
-//   void startRolling() {
-//     setState(() {
-//       isRolling = true;
-//     });
-//     _timer = Timer.periodic(const Duration(milliseconds: 100), (timer) {
-//       setState(() {
-//         currentDiceRoll = randomizer.nextInt(6) + 1;
-//       });
-//     });
-//     print('Rolling started. isRolling: $isRolling');
-//   }
+  void startRolling() {
+    setState(() {
+      isRolling = true;
+    });
+    _timer = Timer.periodic(const Duration(milliseconds: 100), (timer) {
+      setState(() {
+        currentDiceRoll = randomizer.nextInt(6) + 1;
+      });
+    });
+    if (kDebugMode) {
+      print('Rolling started. isRolling: $isRolling');
+    }
+  }
 
-//   void stopRolling() {
-//     _timer?.cancel();
-//     setState(() {
-//       isRolling = false;
-//     });
-//     print('Rolling stopped. isRolling: $isRolling');
-//   }
+  void stopRolling() {
+    _timer?.cancel();
+    setState(() {
+      isRolling = false;
+    });
+    if (kDebugMode) {
+      print('Rolling stopped. isRolling: $isRolling');
+    }
+  }
 
-//   void toggleRolling() {
-//     if (isRolling) {
-//       stopRolling();
-//     } else {
-//       startRolling();
-//     }
-//   }
+  void toggleRolling() {
+    if (isRolling) {
+      stopRolling();
+    } else {
+      startRolling();
+    }
+  }
 
-//   @override
-//   void dispose() {
-//     _timer?.cancel();
-//     super.dispose();
-//   }
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
+  }
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return GestureDetector(
-//       onTap: toggleRolling,
-//       child: Center(
-//         child: Column(
-//           mainAxisAlignment: MainAxisAlignment.center,
-//           children: [
-//             Image.asset(
-//               'assets/images/dice-$currentDiceRoll.png',
-//               width: 200,
-//             ),
-//             const SizedBox(height: 20),
-//             Text(
-//               isRolling ? 'Click to Stop' : 'Click to Start',
-//               style: const TextStyle(fontSize: 18),
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: toggleRolling,
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/images/dice-$currentDiceRoll.png',
+              width: 200,
+            ),
+            const SizedBox(height: 20),
+            Text(
+              isRolling ? 'Click to Stop' : 'Click to Start',
+              style: const TextStyle(fontSize: 18),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
