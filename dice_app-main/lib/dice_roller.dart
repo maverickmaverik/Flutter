@@ -8,7 +8,7 @@ class DiceRoller extends StatefulWidget {
 
   @override
   State<DiceRoller> createState() {
-    return DiceRollerState(); 
+    return DiceRollerState();
   }
 }
 

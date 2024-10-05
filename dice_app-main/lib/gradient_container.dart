@@ -34,12 +34,12 @@ class _GradientContainerState extends State<GradientContainer> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              DiceRoller(key: _diceKey1), 
-              const SizedBox(width: 40),  
-              DiceRoller(key: _diceKey2), 
+              DiceRoller(key: _diceKey1),
+              const SizedBox(width: 40),
+              DiceRoller(key: _diceKey2),
             ],
           ),
-          const SizedBox(height: 40), 
+          const SizedBox(height: 40),
           ElevatedButton(
             onPressed: () {
               _diceKey1.currentState?.rollDice();
