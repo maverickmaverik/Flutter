@@ -13,8 +13,8 @@ class BromoView extends StatelessWidget {
               margin: const EdgeInsets.all(50.0),
               child: Image.asset(
                 'assets/images/bromoview.jpg',
-                width: 1280,
-                height: 720,
+                width: 850,
+                height: 500,
                 alignment: Alignment.center,
                 fit: BoxFit.cover,
               ),
