@@ -13,8 +13,8 @@ class HomePage extends StatefulWidget {
 
 class HomePageState extends State<HomePage> {
   String selectedGender = '';
-  double height = 170;
-  int weight = 60;
+  double height = 120;
+  int weight = 0;
 
   void updateGender(String gender) {
     setState(() {
@@ -75,9 +75,11 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       appBar: AppBar(
-        title: const Text('BMI CALCULATOR'),
-        backgroundColor: const Color(0xFF0A0E21),
+        title: const Text('BMI Calculator'),
+        centerTitle: true,
+        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       ),
       body: Column(
         children: [
@@ -99,7 +101,7 @@ class HomePageState extends State<HomePage> {
             height: 60,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.pink,
+                backgroundColor: const Color.fromARGB(100, 0, 255, 0),
               ),
               onPressed: selectedGender.isNotEmpty ? calculateBMI : null,
               child: const Text(

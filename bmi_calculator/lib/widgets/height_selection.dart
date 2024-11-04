@@ -16,7 +16,7 @@ class HeightSelection extends StatelessWidget {
       margin: const EdgeInsets.all(16),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: const Color(0xFF1D1E33),
+        color: const Color.fromARGB(255, 100, 100, 100),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Column(
@@ -25,7 +25,7 @@ class HeightSelection extends StatelessWidget {
             'HEIGHT',
             style: TextStyle(
               fontSize: 18,
-              color: Color(0xFF8D8E98),
+              color: Color.fromARGB(255, 255, 255, 255),
             ),
           ),
           Row(
@@ -44,17 +44,17 @@ class HeightSelection extends StatelessWidget {
                 'cm',
                 style: TextStyle(
                   fontSize: 18,
-                  color: Color(0xFF8D8E98),
+                  color: Color.fromARGB(255, 0, 0, 0),
                 ),
               ),
             ],
           ),
           SliderTheme(
             data: SliderTheme.of(context).copyWith(
-              activeTrackColor: Colors.white,
-              inactiveTrackColor: const Color(0xFF8D8E98),
-              thumbColor: Colors.pink,
-              overlayColor: Colors.pink.withAlpha(29),
+              activeTrackColor: const Color.fromARGB(255, 0, 0, 0),
+              inactiveTrackColor: const Color.fromARGB(255, 100, 100, 100),
+              thumbColor: const Color.fromARGB(255, 0, 0, 0),
+              overlayColor: const Color.fromARGB(255, 0, 0, 0).withAlpha(29),
               thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 15.0),
               overlayShape: const RoundSliderOverlayShape(overlayRadius: 30.0),
             ),

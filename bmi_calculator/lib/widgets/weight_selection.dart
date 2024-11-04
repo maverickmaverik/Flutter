@@ -16,7 +16,7 @@ class WeightSelection extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 16),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: const Color(0xFF1D1E33),
+        color: const Color.fromARGB(255, 100, 100, 100),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Column(
@@ -25,15 +25,29 @@ class WeightSelection extends StatelessWidget {
             'WEIGHT',
             style: TextStyle(
               fontSize: 18,
-              color: Color(0xFF8D8E98),
+              color: Color.fromARGB(255, 255, 255, 255),
             ),
           ),
-          Text(
-            weight.toString(),
-            style: const TextStyle(
-              fontSize: 50,
-              fontWeight: FontWeight.w900,
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.baseline,
+            textBaseline: TextBaseline.alphabetic,
+            children: [
+              Text(
+                weight.toString(),
+                style: const TextStyle(
+                  fontSize: 50,
+                  fontWeight: FontWeight.w900,
+                ),
+              ),
+              const Text(
+                'kg',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Color.fromARGB(255, 0, 0, 0),
+                ),
+              ),
+            ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -83,7 +97,7 @@ class RoundIconButton extends StatelessWidget {
         height: 56.0,
       ),
       shape: const CircleBorder(),
-      fillColor: const Color(0xFF4C4F5E),
+      fillColor: const Color.fromARGB(255, 150, 150, 150),
       child: Icon(icon),
     );
   }

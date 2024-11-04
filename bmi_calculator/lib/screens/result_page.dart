@@ -28,9 +28,11 @@ class ResultPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       appBar: AppBar(
-        title: const Text('BMI CALCULATOR'),
-        backgroundColor: const Color(0xFF0A0E21),
+        title: const Text('BMI Calculator'),
+        centerTitle: true,
+        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -47,7 +49,7 @@ class ResultPage extends StatelessWidget {
               margin: const EdgeInsets.all(16),
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: const Color(0xFF1D1E33),
+                color: const Color.fromARGB(255, 255, 255, 255),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Column(
@@ -84,7 +86,7 @@ class ResultPage extends StatelessWidget {
             height: 60,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.pink,
+                backgroundColor: const Color.fromARGB(100, 0, 255, 0),
               ),
               onPressed: () {
                 Navigator.pop(context);

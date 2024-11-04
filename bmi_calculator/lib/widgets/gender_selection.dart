@@ -23,8 +23,8 @@ class GenderSelection extends StatelessWidget {
                 height: 160,
                 decoration: BoxDecoration(
                   color: selectedGender == 'male'
-                      ? const Color(0xFF1D1E33)
-                      : const Color(0xFF111328),
+                      ? const Color.fromARGB(200, 0, 0, 255)
+                      : const Color.fromARGB(200, 0, 0, 255),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: const Column(
@@ -39,7 +39,7 @@ class GenderSelection extends StatelessWidget {
                       'MALE',
                       style: TextStyle(
                         fontSize: 18,
-                        color: Color(0xFF8D8E98),
+                        color: Color.fromARGB(255, 0, 0, 0),
                       ),
                     ),
                   ],
@@ -55,8 +55,8 @@ class GenderSelection extends StatelessWidget {
                 height: 160,
                 decoration: BoxDecoration(
                   color: selectedGender == 'female'
-                      ? const Color(0xFF1D1E33)
-                      : const Color(0xFF111328),
+                      ? const Color.fromARGB(200, 200, 0, 0)
+                      : const Color.fromARGB(200, 200, 0, 0),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: const Column(
@@ -71,7 +71,7 @@ class GenderSelection extends StatelessWidget {
                       'FEMALE',
                       style: TextStyle(
                         fontSize: 18,
-                        color: Color(0xFF8D8E98),
+                        color: Color.fromARGB(255, 0, 0, 0),
                       ),
                     ),
                   ],
