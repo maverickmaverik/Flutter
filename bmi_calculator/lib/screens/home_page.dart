@@ -106,7 +106,7 @@ class HomePageState extends State<HomePage> {
               onPressed: selectedGender.isNotEmpty ? calculateBMI : null,
               child: const Text(
                 'CALCULATE',
-                style: TextStyle(fontSize: 20,color: Colors.black),
+                style: TextStyle(fontSize: 20, color: Colors.black),
               ),
             ),
           ),
