@@ -93,7 +93,7 @@ class ResultPage extends StatelessWidget {
               },
               child: const Text(
                 'RE-CALCULATE',
-                style: TextStyle(fontSize: 20),
+                style: TextStyle(fontSize: 20,color: Colors.black),
               ),
             ),
           ),
