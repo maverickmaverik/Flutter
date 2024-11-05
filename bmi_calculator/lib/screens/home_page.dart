@@ -13,8 +13,8 @@ class HomePage extends StatefulWidget {
 
 class HomePageState extends State<HomePage> {
   String selectedGender = '';
-  double height = 120;
-  int weight = 0;
+  double height = 150;
+  int weight = 50;
 
   void updateGender(String gender) {
     setState(() {

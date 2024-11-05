@@ -15,7 +15,7 @@ class GenderSelection extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Row(
-        children: [
+        children:[
           Expanded(
             child: GestureDetector(
               onTap: () => onGenderSelected('male'),

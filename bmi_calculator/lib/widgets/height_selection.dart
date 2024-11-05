@@ -60,7 +60,7 @@ class HeightSelection extends StatelessWidget {
             ),
             child: Slider(
               value: height,
-              min: 120,
+              min: 140,
               max: 220,
               onChanged: onHeightChanged,
             ),
