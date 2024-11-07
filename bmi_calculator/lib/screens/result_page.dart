@@ -13,16 +13,26 @@ class ResultPage extends StatelessWidget {
   String get message {
     switch (classification) {
       case 'Underweight':
-        return 'You should eat more nutritious food to gain some weight!';
+        return 'Consider consulting with a healthcare provider about nutrition';
       case 'Normal':
-        return 'You have a normal body weight. Good job!';
+        return 'Your weight is within typical range';
       case 'Overweight':
-        return 'You should exercise more to lose some weight!';
+        return 'Consider consulting with a healthcare provider about lifestyle changes';
       case 'Obese':
-        return 'You should seriously consider a diet and exercise routine!';
+        return 'Recommended to discuss health options with your healthcare provider';
       default:
         return '';
     }
+  }
+
+  Color _getClassificationColor() {
+    final colors = {
+      'Underweight': Colors.yellow,
+      'Normal': Colors.green,
+      'Overweight': Colors.orange,
+      'Obese': Colors.red,
+    };
+    return colors[classification] ?? Colors.white;
   }
 
   @override
@@ -81,39 +91,27 @@ class ResultPage extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
-            width: double.infinity,
-            height: 60,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color.fromARGB(100, 0, 255, 0),
-              ),
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: const Text(
-                'RE-CALCULATE',
-                style: TextStyle(fontSize: 20,color: Colors.black),
+          Padding(
+            padding: const EdgeInsets.only(left: 16, right: 16, bottom: 16),
+            child: SizedBox(
+              width: 200,
+              height: 60,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromARGB(100, 0, 255, 0),
+                ),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: const Text(
+                  'RE-CALCULATE',
+                  style: TextStyle(fontSize: 20, color: Colors.black),
+                ),
               ),
             ),
           ),
         ],
       ),
     );
-  }
-
-  Color _getClassificationColor() {
-    switch (classification) {
-      case 'Underweight':
-        return Colors.yellow;
-      case 'Normal':
-        return Colors.green;
-      case 'Overweight':
-        return Colors.orange;
-      case 'Obese':
-        return Colors.red;
-      default:
-        return Colors.white;
-    }
   }
 }

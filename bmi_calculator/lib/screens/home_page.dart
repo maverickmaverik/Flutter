@@ -96,20 +96,22 @@ class HomePageState extends State<HomePage> {
             onWeightChanged: updateWeight,
           ),
           const Spacer(),
-          SizedBox(
-            width: double.infinity,
-            height: 60,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color.fromARGB(100, 0, 255, 0),
-              ),
-              onPressed: selectedGender.isNotEmpty ? calculateBMI : null,
-              child: const Text(
-                'CALCULATE',
-                style: TextStyle(fontSize: 20, color: Colors.black),
-              ),
-            ),
-          ),
+          Padding(
+              padding: const EdgeInsets.only(left: 16, right: 16, bottom: 16),
+              child: SizedBox(
+                width: 180,
+                height: 60,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color.fromARGB(100, 0, 255, 0),
+                  ),
+                  onPressed: selectedGender.isNotEmpty ? calculateBMI : null,
+                  child: const Text(
+                    'CALCULATE',
+                    style: TextStyle(fontSize: 20, color: Colors.black),
+                  ),
+                ),
+              )),
         ],
       ),
     );
