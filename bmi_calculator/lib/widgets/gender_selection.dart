@@ -91,6 +91,7 @@ class GenderSelection extends StatelessWidget {
                 : 'Selected Gender: $selectedGender',
             style: const TextStyle(
               fontSize: 18,
+              fontWeight: FontWeight.bold,
             ),
           ),
         ],

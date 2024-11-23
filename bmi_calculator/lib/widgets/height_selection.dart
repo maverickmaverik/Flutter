@@ -37,7 +37,7 @@ class HeightSelection extends StatelessWidget {
                 height.round().toString(),
                 style: const TextStyle(
                   fontSize: 50,
-                  fontWeight: FontWeight.w900,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
               const Text(

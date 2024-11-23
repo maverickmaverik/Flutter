@@ -37,7 +37,7 @@ class WeightSelection extends StatelessWidget {
                 weight.toString(),
                 style: const TextStyle(
                   fontSize: 50,
-                  fontWeight: FontWeight.w900,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
               const Text(
