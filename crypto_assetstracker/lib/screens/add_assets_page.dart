@@ -218,8 +218,8 @@ class _AddAssetScreenState extends State<AddAssetScreen> {
                     child: ElevatedButton(
                       onPressed: _selectedCategory == null ? null : _submitForm,
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.purple,
-                        foregroundColor: Colors.white,
+                        backgroundColor: const Color.fromARGB(90, 65, 65, 65),
+                        foregroundColor: Colors.purple,
                         elevation: 0,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),

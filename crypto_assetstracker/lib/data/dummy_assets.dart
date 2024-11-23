@@ -13,7 +13,7 @@ final dummyAssets = [
     id: '2',
     name: 'USDT',
     quantity: 2100.0,
-    buyPrice: 2100,
+    buyPrice: 1,
     category: Categories.stablecoins,
   ),
   const MyAsset(
