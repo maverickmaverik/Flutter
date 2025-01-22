@@ -64,7 +64,7 @@ class HomeScreen extends StatelessWidget {
           }
 
           var notes = snapshot.data?.docs ?? [];
-          
+
           notes = notes.toList()
             ..sort((a, b) {
               final dateA = (a['created_date'] as Timestamp).toDate();
