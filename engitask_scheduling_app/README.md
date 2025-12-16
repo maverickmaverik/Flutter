@@ -1,16 +1,11 @@
-# engitask_scheduling_app
+#📅 EngiTask Scheduling App
+A robust and user-friendly Task Scheduling application built with Flutter. This app allows users to create, manage, and schedule daily tasks with integrated local notifications to ensure you never miss a deadline.
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+##✨ Features
+Task Management: Create, Read, Update, and Delete (CRUD) tasks effortlessly.
+Smart Scheduling: Pick dates and specific start/end times for every task.
+Reminders: Integrated Local Notifications trigger at the exact scheduled time.
+Status Tracking: Mark tasks as "Completed" or "Todo".
+Color Coding: Organize tasks by categories using different color tags.
+Offline Support: All data is persisted locally using SQLite.
+Dark/Light Mode: Seamless theme switching.
