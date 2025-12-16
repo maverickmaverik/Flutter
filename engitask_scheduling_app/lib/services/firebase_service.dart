@@ -50,11 +50,11 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBLEs7ZlOHrUEzkNJBFQokDcdMJEglw5dc',
-    appId: '1:696211390314:android:02e1838eabf89d3047af13',
-    messagingSenderId: '696211390314',
-    projectId: 'tr-made-4f265',
-    storageBucket: 'tr-made-4f265.appspot.com',
+    apiKey: '[]',
+    appId: '[]',
+    messagingSenderId: '[]',
+    projectId: '[]',
+    storageBucket: '[]',
 );
 
   static const FirebaseOptions ios = FirebaseOptions(
